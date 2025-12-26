@@ -9,7 +9,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/gimnasio.png",
+    background: "./assets/levels/gimnasio.png",
 
     // 🧍 Nano
     nano: {
@@ -21,7 +21,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/juanchi_idle.png",
+      img: "./assets/friends/juanchi_idle.png",
       width: 200,
       height: 200,
       x: 100,
@@ -95,7 +95,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/construccion.png",
+    background: "./assets/levels/construccion.png",
 
     // 🧍 Nano
     nano: {
@@ -107,7 +107,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amiga del piso
     friend: {
-      img: "assets/friends/cata_idle.png",
+      img: "./assets/friends/cata_idle.png",
       width: 180,
       height: 180,
       x: 170,
@@ -170,7 +170,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/salon.png",
+    background: "./assets/levels/salon.png",
 
     // 🧍 Nano
     nano: {
@@ -182,7 +182,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/azul_idle.png",
+      img: "./assets/friends/azul_idle.png",
       width: 200,
       height: 200,
       x: 400,
@@ -253,7 +253,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/pieza_aure.png",
+    background: "./assets/levels/pieza_aure.png",
 
     // 🧍 Nano
     nano: {
@@ -265,7 +265,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/aure_idle.png",
+      img: "./assets/friends/aure_idle.png",
       width: 250,
       height: 250,
       x: 150,
@@ -332,7 +332,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/cocina.png",
+    background: "./assets/levels/cocina.png",
 
     // 🧍 Nano
     nano: {
@@ -344,7 +344,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/zoe_idle.png",
+      img: "./assets/friends/zoe_idle.png",
       width: 200,
       height: 200,
       x: 150,
@@ -386,7 +386,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/australia.png",
+    background: "./assets/levels/australia.png",
 
     // 🧍 Nano
     nano: {
@@ -398,7 +398,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/igna_idle.png",
+      img: "./assets/friends/igna_idle.png",
       width: 200,
       height: 200,
       x: 750,
@@ -440,7 +440,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/pieza_gaston.png",
+    background: "./assets/levels/pieza_gaston.png",
 
     // 🧍 Nano
     nano: {
@@ -452,7 +452,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/gaston_idle.png",
+      img: "./assets/friends/gaston_idle.png",
       width: 200,
       height: 200,
       x: 250,
@@ -494,7 +494,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/biblioteca.png",
+    background: "./assets/levels/biblioteca.png",
 
     // 🧍 Nano
     nano: {
@@ -506,7 +506,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/coti_idle.png",
+      img: "./assets/friends/coti_idle.png",
       width: 150,
       height: 150,
       x: 200,
@@ -549,7 +549,7 @@ const levels = [
     },
 
     // 🖼️ Fondo
-    background: "assets/levels/cielo.png",
+    background: "./assets/levels/cielo.png",
 
     // 🧍 Nano
     nano: {
@@ -561,7 +561,7 @@ const levels = [
 
     // 🧑‍🤝‍🧑 Amigo del piso
     friend: {
-      img: "assets/friends/flor_idle.png",
+      img: "./assets/friends/flor_idle.png",
       width: 300,
       height: 300,
       x: 350,
