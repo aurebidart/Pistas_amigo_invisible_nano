@@ -4,12 +4,13 @@ const nano = document.getElementById("nano");
 const friend = document.getElementById("friend");
 const friendImg = document.getElementById("friend-img");
 
-let currentLevel = 1;
+let currentLevel = 0;
 let currentLevelData = null;
 let activeZone = null;
 let dialogOpen = false;
 let ladderLock = false;
-
+let dialogIndex = 0;
+let currentDialog = null;
 
 function loadLevel(levelIndex) {
   const level = levels[levelIndex];
@@ -72,7 +73,9 @@ function loadLevel(levelIndex) {
 }
 
 function gameLoop() {
-  updateNanoPosition();
+  if (!dialogOpen) {
+    updateNanoPosition();
+  }
   checkInteractions();
   handleInteractionKey();
   requestAnimationFrame(gameLoop);
@@ -155,21 +158,19 @@ function handleInteractionKey() {
 
     if (!activeZone) return;
 
-    // 🗨️ diálogo
     if (activeZone.type === "dialog") {
       if (!dialogOpen) {
-        openDialog(activeZone.data.text);
+        openDialog(activeZone.data);
       } else {
-        closeDialog();
+        advanceDialog();
       }
+      return;
     }
 
-    // 🪜 subir
     if (activeZone.type === "ladderUp") {
       changeLevel(1);
     }
 
-    // 🪜 bajar
     if (activeZone.type === "ladderDown") {
       changeLevel(-1);
     }
@@ -178,6 +179,17 @@ function handleInteractionKey() {
   if (!keys.interact) {
     eWasPressed = false;
   }
+}
+
+function advanceDialog() {
+  dialogIndex++;
+
+  if (dialogIndex >= currentDialog.length) {
+    closeDialog();
+    return;
+  }
+
+  showDialogLine();
 }
 
 // 🚀 arrancamos el juego
