@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>El Infierno de Nano</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/game.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>El Infierno de Nano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <div id="game-container">
-      <!-- ESCENA / NIVEL -->
-      <div id="scene">
-        <img id="scene-bg" src="" alt="Nivel" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/game.css" />
+</head>
 
-        <div id="friend">
-          <img id="friend-img" src="" />
-        </div>
+<body>
+  <div id="game-container">
+    <!-- ESCENA / NIVEL -->
+    <div id="scene">
+      <img id="scene-bg" src="" alt="Nivel" />
 
-        <div id="nano">
-          <img id="nano-img" src="assets/nano/nano_idle.png" />
-        </div>
-        
-        <div id="ladder-up" class="ladder debug"></div>
+      <div id="friend">
+        <img id="friend-img" src="" />
+      </div>
 
-        <div id="ladder-down" class="ladder debug"></div>
+      <div id="nano">
+        <img id="nano-img" src="assets/nano/nano_idle.png" />
+      </div>
 
-        <div id="hint" class="hidden">Presioná E</div>
+      <div id="ladder-up" class="ladder debug"></div>
 
-        <!-- DIÁLOGO -->
-        <div id="dialog" class="hidden">
-          <div id="dialog-content">
-            <p id="dialog-text"></p>
-          </div>
+      <div id="ladder-down" class="ladder debug"></div>
+
+      <div id="hint" class="hidden">Presioná E</div>
+
+      <!-- DIÁLOGO -->
+      <div id="dialog" class="hidden">
+        <div id="dialog-content">
+          <p id="dialog-text"></p>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="js/levels.js"></script>
-    <script src="js/player.js"></script>
-    <script src="js/controls.js"></script>
-    <script src="js/dialog.js"></script>
-    <script src="js/game.js"></script>
-  </body>
+  <!-- MODAL CONTRASEÑA FINAL -->
+  <div id="password-modal" class="hidden">
+    <div class="password-box">
+      <p>Escribe la contraseña</p>
+
+      <input type="text" id="password-input" autocomplete="off" />
+
+      <div style="margin-top: 10px;">
+        <button id="password-submit">Enviar</button>
+        <button id="password-cancel">Seguir buscando</button>
+      </div>
+
+      <p id="password-error" class="hidden">
+        Contraseña incorrecta, revisa las pistas
+      </p>
+    </div>
+  </div>
+
+  <script src="js/levels.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/dialog.js"></script>
+  <script src="js/game.js"></script>
+</body>
+
 </html>

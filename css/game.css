@@ -101,3 +101,37 @@
 .hidden {
   display: none;
 }
+
+#password-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.password-box {
+  background: black;
+  border: 2px solid white;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+}
+
+.password-box input {
+  margin-top: 10px;
+  padding: 5px;
+  font-family: monospace;
+}
+
+.password-box button {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+#password-modal.hidden {
+  display: none;
+}

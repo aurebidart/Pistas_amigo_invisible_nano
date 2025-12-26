@@ -1,11 +1,22 @@
 const dialog = document.getElementById("dialog");
 const dialogText = document.getElementById("dialog-text");
+const passwordModal = document.getElementById("password-modal");
+const passwordInput = document.getElementById("password-input");
+const passwordSubmit = document.getElementById("password-submit");
+const passwordError = document.getElementById("password-error");
+const passwordCancel = document.getElementById("password-cancel");
+
+passwordCancel.addEventListener("click", closePasswordModal);
+passwordSubmit.addEventListener("click", checkPassword);
+
+let passwordOpen = false;
 
 function openDialog(dialogData) {
   currentDialog = dialogData.lines;
   dialogIndex = 0;
-
   dialogOpen = true;
+
+  nanoImg.src = "assets/nano/nano_idle.png";
   showDialogLine();
 }
 
@@ -43,13 +54,60 @@ function positionDialogAboveNano() {
   dialog.style.transform = "translateX(-50%) translateY(-110%)";
 }
 
+function advanceDialog() {
+  dialogIndex++;
+
+  if (dialogIndex >= currentDialog.length) {
+    closeDialog();
+    return;
+  }
+
+  showDialogLine();
+}
+
 function closeDialog() {
   dialog.classList.add("hidden");
   dialogOpen = false;
   currentDialog = null;
+
+  // 🔐 SOLO si el diálogo fue con Flor
+  if (currentLevelData.final) {
+    openPasswordModal();
+  }
 }
 
-if (dialogOpen) {
-  nanoImg.src = "assets/nano/nano_idle.png";
-  return;
+const validPasswords = [
+  "flor",
+  "florci",
+  "flordios",
+  "florencia",
+];
+
+function openPasswordModal() {
+  passwordOpen = true;
+  passwordModal.classList.remove("hidden");
+  passwordInput.value = "";
+  passwordError.classList.add("hidden");
+  passwordInput.focus();
+}
+
+function checkPassword() {
+  const value = passwordInput.value.trim().toLowerCase();
+
+  if (validPasswords.includes(value)) {
+    winGame();
+  } else {
+    passwordError.classList.remove("hidden");
+  }
+}
+
+passwordInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    checkPassword();
+  }
+});
+
+function closePasswordModal() {
+  passwordOpen = false;
+  passwordModal.classList.add("hidden");
 }

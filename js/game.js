@@ -4,7 +4,7 @@ const nano = document.getElementById("nano");
 const friend = document.getElementById("friend");
 const friendImg = document.getElementById("friend-img");
 
-let currentLevel = 0;
+let currentLevel = 8;
 let currentLevelData = null;
 let activeZone = null;
 let dialogOpen = false;
@@ -73,10 +73,10 @@ function loadLevel(levelIndex) {
 }
 
 function gameLoop() {
-  if (!dialogOpen) {
+  if (!dialogOpen && !passwordOpen) {
     updateNanoPosition();
+    checkInteractions();
   }
-  checkInteractions();
   handleInteractionKey();
   requestAnimationFrame(gameLoop);
 }
@@ -158,6 +158,7 @@ function handleInteractionKey() {
 
     if (!activeZone) return;
 
+    // Diálogo
     if (activeZone.type === "dialog") {
       if (!dialogOpen) {
         openDialog(activeZone.data);
@@ -167,10 +168,12 @@ function handleInteractionKey() {
       return;
     }
 
+    // Subir
     if (activeZone.type === "ladderUp") {
       changeLevel(1);
     }
 
+    // Bajar
     if (activeZone.type === "ladderDown") {
       changeLevel(-1);
     }
@@ -181,15 +184,13 @@ function handleInteractionKey() {
   }
 }
 
-function advanceDialog() {
-  dialogIndex++;
-
-  if (dialogIndex >= currentDialog.length) {
-    closeDialog();
-    return;
-  }
-
-  showDialogLine();
+function winGame() {
+  passwordModal.innerHTML = `
+    <div class="password-box">
+      <p>🎉 ¡Ganaste el juego! 🎉</p>
+      <p>Gracias por jugar</p>
+    </div>
+  `;
 }
 
 // 🚀 arrancamos el juego
