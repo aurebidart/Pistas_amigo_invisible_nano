@@ -4,7 +4,7 @@ const nano = document.getElementById("nano");
 const friend = document.getElementById("friend");
 const friendImg = document.getElementById("friend-img");
 
-let currentLevel = 3;
+let currentLevel = 1;
 let currentLevelData = null;
 let activeZone = null;
 let dialogOpen = false;
