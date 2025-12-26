@@ -36,41 +36,33 @@ const levels = [
       y: 300,
       lines: [
         {
+          speaker: "friend",
+          text: "¡Hola brooo!!! Que onda? Viste estoy levantando una banda de peso.",
+        },
+        {
+          speaker: "fiend",
+          text: "¿Vas a la fiesta de hoy?",
+        },
+        {
           speaker: "nano",
-          text: "¡Hola Juanchi! Hoy lo viste? UwU",
+          text: "¡Faaa, un monton!",
+        },
+        {
+          speaker: "nano",
+          text: "Si quiero ir pero primero tengo que adivinar quien es mi amigo invisible para entrar a la fiesta.",
         },
         {
           speaker: "friend",
-          text: "¡Hola brooo!!! Que onda? Viste estoy levantando una banda de peso. Pero la verdad que no se donde está, hoy no vino a entrenar.",
-        },
-        {
-          speaker: "nano",
-          text: "oh! Bueno voy a seguir buscando",
+          text: "Mmm, no te puedo ayudar mucho..."
         },
         {
           speaker: "friend",
-          text: "¡Preguntale a los chicos! Hoy nos encontramos todos a la noche en la fiesta",
-        },
-        {
-          speaker: "nano",
-          text: "¿Qué fiesta?",
+          text: "Pero si te enteras quien es, decile que venga a entrenar.",
         },
         {
           speaker: "friend",
-          text: "No te regale bichito de luz. No te olvides de la contraseña para entrar",
+          text: "Hace rato me viene prometiendo que va a arrancar",
         },
-        {
-          speaker: "nano",
-          text: "¡Ahhh claro! ¿Qué contraseña era?",
-        },
-        {
-          speaker: "nano",
-          text: "...",
-        },
-        {
-          speaker: "nano",
-          text: "Bueno, voy a seguir buscando a ver si la averiguo",
-        }
       ],
     },
 
@@ -131,15 +123,23 @@ const levels = [
         },
         {
           speaker: "nano",
-          text: "¡Hola Cata! Muy cheeeeto tu edificio, hoy no tenías showcito? Me dijeron de una fiesta para ir",
+          text: "¡Hola Cata! Muy cheeeeto tu edificio, hoy no tenías showcito?",
         },
         {
           speaker: "friend",
-          text: "Sisi tengo el show nro 196 del año, pero termino acá y me voy a la fiesta. Ya encontraste a tu amigo? Sin esa persona no vas a poder entrar mepa, una poronga la verdad. Yo lo necesito para algunas ideas.",
+          text: "Sisi tengo el show nro 196 del año, pero termino acá y me voy a la fiesta. ¿Vos vas?",
         },
         {
           speaker: "nano",
-          text: "Aún no pipipipi, pero tengo que seguir. Mandá foto cuando estes en primera fila.",
+          text: "Si... ¿Por esas casualidades viste a mi amigo invisible hoy?",
+        },
+        {
+          speaker: "friend",
+          text: "De hecho, no. Me dijo que me iba a acompañar al showcito para ir a primera fila.",
+        },
+        {
+          speaker: "friend",
+          text: "¡Buena suerte!",
         },
       ],
     },
@@ -198,7 +198,7 @@ const levels = [
       lines: [
         {
           speaker: "friend",
-          text: "Giro giro, pata arriba. Vuelo giro como mariposssssaaaaa",
+          text: "Giro, giro, pata arriba. Vuelo giro como mariposssssaaaaa",
         },
         {
           speaker: "friend",
@@ -297,7 +297,11 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Si te sirve de algo, cada persona tiene una contraseña diferente. La tuya era algo relacionado con taranana taranana taranana taranana...",
+          text: "La respuesta puede estar en cualquier rincón",
+        },
+        {
+          speaker: "friend",
+          text: "Tate atento,",
         },
         {
           speaker: "nano",
@@ -357,7 +361,32 @@ const levels = [
       height: 50,
       x: 150,
       y: 100,
-      text: "Un gusto a verga lo que cocinan aca.",
+      lines: [
+        {
+          speaker: "friend",
+          text: "¡Hola Nano!",
+        },
+        {
+          speaker: "nano",
+          text: "¡Zoe! Qué bueno verte por acá, ¿cómo andás?",
+        },
+        {
+          speaker: "friend",
+          text: "Bien, acá preparando unos postres para la fiesta de esta noche.",
+        },
+        {
+          speaker: "nano",
+          text: "Si queres te ayudo con los postres.",
+        },
+        {
+          speaker: "friend",
+          text: "No te preocupes. Ponete linda para esta noche nomás.",
+        },
+        {
+          speaker: "nano",
+          text: "Dale, nos vemos más tarde entonces.",
+        }
+      ],
     },
 
     // 🪜 Escaleras
@@ -402,7 +431,7 @@ const levels = [
       width: 200,
       height: 200,
       x: 750,
-      y: 100,
+      y: 200,
     },
 
     // 🗨️ Zona de diálogo
@@ -410,8 +439,33 @@ const levels = [
       width: 200,
       height: 200,
       x: 750,
-      y: 100,
-      text: "Un gusto a verga lo que cocinan aca.",
+      y: 200,
+      lines: [
+        {
+          speaker: "nano",
+          text: "¡Hola Igna! Qué bueno verte por acá, ¿cómo andás?",
+        },
+        {
+          speaker: "friend",
+          text: "¡Nano! Todo bien, acá explorando un poco Australia antes de la fiesta.",
+        },
+        {
+          speaker: "friend",
+          text: "Vi un canguro hace un rato, re loco.",
+        },
+        {
+          speaker: "friend",
+          text: "¿No viste nada?",
+        },
+        {
+          speaker: "nano",
+          text: "No, nada por ahora. Pero sigo buscando a mi amigo invisible.",
+        },
+        {
+          speaker: "friend",
+          text: "Bueno, suerte con eso. Nos vemos en la fiesta.",
+        },
+      ],
     },
 
     // 🪜 Escaleras
@@ -465,7 +519,32 @@ const levels = [
       height: 100,
       x: 250,
       y: 300,
-      text: "Un gusto a verga lo que cocinan aca.",
+      lines: [
+        {
+          speaker: "nano",
+          text: "¡Gasti! Tenía entendido que te ibas a quedar en Argentina",
+        },
+        {
+          speaker: "friend",
+          text: "¡Nano! Sí, tuve que venirme unos días.",
+        },
+        {
+          speaker: "friend",
+          text: "Igual aca aprovecho para estar con el gato. Alla tuve que limpiar y desinfectar todo",
+        },
+        {
+          speaker: "nano",
+          text: "Jaja, ¿Por qué? ¿Qué pasó?",
+        },
+        {
+          speaker: "friend",
+          text: "Pasa que tu amigo invisible... la alergía hace que no pueda parar de estornudar.",
+        },
+        {
+          speaker: "nano",
+          text: "¡No puede ser! Justo a mi me toca un amigo invisible con alergía a los gatos...",
+        },
+      ],
     },
 
     // 🪜 Escaleras
@@ -519,7 +598,36 @@ const levels = [
       height: 100,
       x: 200,
       y: 350,
-      text: "Un gusto a verga lo que cocinan aca.",
+      lines: [
+        {
+          speaker: "friend",
+          text: "Podrá ser Alicia tan tonta de caerse al pozo?",
+        },
+        {
+          speaker: "friend",
+          text: "¡Nano! ¿Buscando algo interesante?",
+        },
+        {
+          speaker: "nano",
+          text: "¡Coti! Sí, estoy tratando de encontrar la contraseña para entrar a la fiesta.",
+        },
+        {
+          speaker: "friend",
+          text: "Mmm, no sé si acá vas a encontrar algo...",
+        },
+        {
+          speaker: "friend",
+          text: "Yo paso a buscar a Gastoncito y vamos juntos. Seguro lleve un poco de comida árabe.",
+        },
+        {
+          speaker: "nano",
+          text: "Dale, nos vemos allá entonces.",
+        },
+        {
+          speaker: "friend",
+          text: "Si encontras a tu amigo secreto, dejale esta bolsa que es para el martes"
+        }
+      ],
     },
 
     // 🪜 Escaleras
@@ -577,15 +685,19 @@ const levels = [
       lines: [
         {
           speaker: "friend",
-          text: "¡Nano! ¡Por fin te encuentro!",
-        },
-        {
-          speaker: "nano",
-          text: "¡Flor! Vamos a la fiesta? Ya se la contraseña",
+          text: "¡Nanitooo! ¿Cómo estás?",
         },
         {
           speaker: "friend",
-          text: "¡Claro! Me alegro que hayas encontrado la contraseña. Vení, te estaba esperando",
+          text: "Llegaste al cielo FLORITOCRATICO",
+        },
+        {
+          speaker: "friend",
+          text: "Ando a mil, tengo la cabeza en las nubes",
+        },
+        {
+          speaker: "friend",
+          text: "¿Ya sabés quien es tu amigo invisible? Con tantas pistas creo que está claro",
         },
       ],
     },

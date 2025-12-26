@@ -16,7 +16,7 @@ function openDialog(dialogData) {
   dialogIndex = 0;
   dialogOpen = true;
 
-  nanoImg.src = "assets/nano/nano_idle.png";
+  nanoImg.src = "./assets/nano/nano_idle.png";
   showDialogLine();
 }
 
