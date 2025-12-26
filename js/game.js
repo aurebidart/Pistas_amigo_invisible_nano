@@ -188,7 +188,11 @@ function winGame() {
   passwordModal.innerHTML = `
     <div class="password-box">
       <p>🎉 ¡Ganaste el juego! 🎉</p>
-      <p>Gracias por jugar</p>
+      <p>Tu regalo es un </p>
+      <p>APAPACHO</p>
+      <p>Un cupo ilimitado de abrazos, esos de oso, así como los que pediste en tu wishlist</p>
+      <p>Espero te guste tu regalo, tanto como a mí me gustó hacer este juego para vos ❤️</p>
+      <p>Te quiero mucho</p>
     </div>
   `;
 }

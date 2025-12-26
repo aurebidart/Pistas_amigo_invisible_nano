@@ -1,5 +1,54 @@
 const levels = [
   {
+    id: 0,
+
+    // 📐 Tamaño del nivel
+    size: {
+      width: 1000,
+      height: 610,
+    },
+
+    // 🖼️ Fondo
+    background: "./assets/levels/menu.png",
+
+    // 🧍 Nano
+    nano: {
+      width: 200,
+      height: 200,
+      startX: 50,
+      startY: 360,
+    },
+
+    // 🧑‍🤝‍🧑 Amiga del piso
+    friend: {
+      img: "./assets/friends/flor_idle.png",
+      width: 0,
+      height: 0,
+      x: 0,
+      y: 0,
+    },
+
+    // 🗨️ Zona de diálogo
+    dialog: {
+      width: 0,
+      height: 0,
+      x: 0,
+      y: 0,
+      lines: [],
+    },
+
+    // 🪜 Escaleras
+    ladders: {
+      up: {
+        width: 244,
+        height: 149,
+        x: 358,
+        y: 323,
+      },
+      down: null,
+    },
+  },
+  {
     id: 1,
 
     // 📐 Tamaño del nivel (coincide con el PNG)
@@ -40,7 +89,7 @@ const levels = [
           text: "¡Hola brooo!!! Que onda? Viste estoy levantando una banda de peso.",
         },
         {
-          speaker: "fiend",
+          speaker: "friend",
           text: "¿Vas a la fiesta de hoy?",
         },
         {
@@ -127,7 +176,7 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Sisi tengo el show nro 196 del año, pero termino acá y me voy a la fiesta. ¿Vos vas?",
+          text: "Sisi tengo el show del Ruso, pero termino acá y me voy a la fiesta. ¿Vos vas?",
         },
         {
           speaker: "nano",
@@ -198,27 +247,27 @@ const levels = [
       lines: [
         {
           speaker: "friend",
-          text: "Giro, giro, pata arriba. Vuelo giro como mariposssssaaaaa",
+          text: "Paso, paso, pierna arriba... me deslizo como vibora...",
         },
         {
           speaker: "friend",
-          text: "NANO! Cuando venís a hacer pol conmigo?, alguien que conozco me viene prometiendo hace mucho.",
+          text: "NANO! Cuando venís a hacer pol conmigo?",
         },
         {
           speaker: "nano",
-          text: "¡Hola Azullll! Yyy mira, si Queres hago unas paralelas o me paro de manos",
+          text: "¡Hola Azullll! Yyy mira, si Queres hago unas paralelas o me paro de manos. Vas a la fiesta hoy?",
         },
         {
           speaker: "friend",
-          text: "Es solo cuestión de flexibilidad! O no Leoooon?",
+          text: "Si hay mate, si. Además creo que la busco a Caty en la albóndiga.",
         },
         {
           speaker: "nano",
-          text: "Vas hoy?",
+          text: "Y no me querés chusemar quién es mi amigo invisible?",
         },
         {
           speaker: "friend",
-          text: "Si hay mate si, pero tengo que pasar a buscar a los chicos antes en la albóndiga",
+          text: "Nano no!, Tenés que encontrar a... digo eee casi meto la pata. Hoy no lo vi pero me prometió que vamos a ver Orgullo y prejuicio",
         },
         {
           speaker: "nano",
@@ -289,7 +338,7 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Tengo que terminar un par de cosas y me prendo. ¿Tenés la contraseña?",
+          text: "Tengo que terminar un par de cosas y me prendo. ¿Ya sabés quién es tu amigo invisible?",
         },
         {
           speaker: "nano",
@@ -443,11 +492,23 @@ const levels = [
       lines: [
         {
           speaker: "nano",
-          text: "¡Hola Igna! Qué bueno verte por acá, ¿cómo andás?",
+          text: "Ola linda, esa pelada es helado de vainilla?",
+        },
+        {
+          speaker: "nano",
+          text: "Porque tengo ganas de chuparla con este calor.",
         },
         {
           speaker: "friend",
-          text: "¡Nano! Todo bien, acá explorando un poco Australia antes de la fiesta.",
+          text: "¡NANO!",
+        },
+        {
+          speaker: "friend",
+          text: "Me excité un poquito",
+        },
+        {
+          speaker: "friend",
+          text: "Todo bien, acá explorando un poco Australia antes de la fiesta.",
         },
         {
           speaker: "friend",
@@ -530,7 +591,7 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Igual aca aprovecho para estar con el gato. Alla tuve que limpiar y desinfectar todo",
+          text: "Igual acá aprovecho para estar con el gato. Allá tuve que limpiar y desinfectar todo",
         },
         {
           speaker: "nano",
@@ -538,11 +599,15 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Pasa que tu amigo invisible... la alergía hace que no pueda parar de estornudar.",
+          text: "Pasa que tu amigo invisible y su PUTA alergia.",
         },
         {
           speaker: "nano",
-          text: "¡No puede ser! Justo a mi me toca un amigo invisible con alergía a los gatos...",
+          text: "¡JA que paja!...",
+        },
+        {
+          speaker: "nano",
+          text: "Nos vemos mas tarde",
         },
       ],
     },
@@ -577,8 +642,8 @@ const levels = [
 
     // 🧍 Nano
     nano: {
-      width: 150,
-      height: 150,
+      width: 250,
+      height: 250,
       startX: 420,
       startY: 50,
     },
@@ -609,7 +674,7 @@ const levels = [
         },
         {
           speaker: "nano",
-          text: "¡Coti! Sí, estoy tratando de encontrar la contraseña para entrar a la fiesta.",
+          text: "¡Coti! Sí, estoy tratando de saber quién es mi amigo invisible antes de la fiesta.",
         },
         {
           speaker: "friend",
@@ -625,7 +690,7 @@ const levels = [
         },
         {
           speaker: "friend",
-          text: "Si encontras a tu amigo secreto, dejale esta bolsa que es para el martes"
+          text: "Si encontras a tu amigo secreto, dejale esta bolsa por fa"
         }
       ],
     },
